@@ -1,0 +1,27 @@
+위니브(이름)
+www.naver.com(이름)
+
+URL(이름)            IP(주소)        PORT(문)
+www.naver.com        223.130.195.95    http://paullab.synology.me:5000/ (로그인창)
+                    http://paullab.synology.me:80/ (명함)
+                    22, 23, 80(http), 443(https)...
+
+
+내 서비스 만들기 절차
+1. 도메인 구입(https://hosting.cafe24.com/?controller=new_domain_search (1년 22000원))
+2. DNS에 등록
+3. Server 구입 또는 대여(클라우드)
+4. 대여한 서버에 세팅(index.html파일 올립니다.)
+5. 구매한 사이트로 가서 도메인(URL)에 서버 IP를 연결해줍니다.
+
+
+git pull
+git add .
+git commit -m '메시지'
+git push
+
+
+git pull : 원격 저장소에서 코드를 가져옵니다.
+git add . : 현재 폴더에 있는 수정되거나 추가된 파일을 추적합니다.
+git commit -m '메시지' : 소스코드에 유의미한 '메시지' version을 만듭니다.
+git push : 원격 저장소에 소스코드를 올립니다.
