@@ -1,0 +1,41 @@
+
+
+@font-face {
+    font-family: 'KBO-Dia-Gothic_bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    background-color: rgb(159, 185, 171);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'KBO-Dia-Gothic_bold';
+}
+
+p{
+    font-family: 'TTWanjudaedunsancheB';
+    color: black;
+    font-size: 40px;
+    text-shadow: 5px 5px 2px grey;
+}
+
+.str {
+    color: red;
+    text-decoration: underline yellow;
+}
+
+.str2{
+    color: blue;
+    text-decoration: underline yellow;
+}

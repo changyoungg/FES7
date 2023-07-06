@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        p::before {
+            content: "7기 여러분 ";
+        }
+
+        p::after {
+            content: "😊😊 ";
+        }
+
+        /* 인풋 같은 빈태그 에는 앞 뒤 구분이 어려워서 사용 불가
+        input::before{
+            content: "7기 여러분 ";
+        } */
+    </style>
+</head>
+
+<body>
+    <p>안녕하세요</p>
+
+    <img src="">
+    <input type="text">
+</body>
+
+</html>
