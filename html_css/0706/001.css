@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+
+/* 절대경로 폰트 삽입 */
+@font-face {
+    font-family: 'KBO-Dia-Gothic_bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 상대경로 폰트 삽입 */
+@font-face {
+    font-family: 'pretendard-regular';
+    src: url(./font/Pretendard-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    color: red;
+}
+
+h1 {
+    color: inherit;
+    font-family: 'Bagel Fat One', cursive;
+    /* 링크 해서 넣은 폰트 */
+}
+
+strong {
+    border-bottom: 5px solid currentColor;
+}
+
+h2 {
+    color: #999;
+    font-family: 'pretendard-regular';
+    /* 임포트 해서 넣은 폰트 */
+}
+
+
+
+
+
+
+
+/* 수업 끝나고 바디에 보더 넣고 h1 strong 이어서 inherit으로 적용해보기 */

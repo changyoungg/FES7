@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        p{
+            color:salmon;
+        }
+        .class1 {
+            color: brown;
+        }
+        [type="text"]{
+            background-color: burlywood;
+        }
+    </style>
+    <link rel="stylesheet" href="./001.css">
+</head>
+<body>
+    <p style="color:royalblue">hello world</p>
+    <p>Hello world</p>
+    <p class="class1">1반 여러분 </p>
+    <input type="name" placeholder="이름">
+    <input type="birth" placeholder="생일">
+    <a href="//www.naver.com">네이버로 이동</a> <!--이 경우 절대경로라서 이동이 안됨 ww앞에 // 붙여서 상대경로로 이동 가능 -->
+</body>
+</html>
+
+
+<!-- 자손선택자 section p{} -->
+<!-- 자식선택자(직계자손) section>p{} 태그를 써도 되고 클래스를 써도 됨 -->
+<!-- 일반형제선택자 section~p{} 앞에는 선택할 수 없다 -->
+<!-- 인접형제선택자 section+p{} 바로 뒤에만 가능 -로 앞에는 불가 -->
+<!-- 상속이 안되는 태그도 있음 그럴 경우 따로 빼서 직접 속성추가가능 -->
+<!-- ex color :inherit; 사용 시 상속을 강제로 받기 가능 -->
+<!-- 너비도 상속 가능 그러나 같은 값은 아님 -->
+
+section * {
+    border: 3px solid seagreen;
+}
+
+
+
+<section>
+    <div>
+        <p>하나</p>
+    </div>
+    <p>둘</p>
+    <p>셋</p>
+
+
+
+
+
+
+    h1~6 heading 제목
+
+
+
+
+    <!-- <!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>a태그</title>
+  <style>
+    div {
+      height: 100vh;
+    }
+
+    section {
+      height: 100vh;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="https://www.naver.com/">네이버로 이동합니다.</a>
+    <a href="//www.naver.com">네이버로 이동합니다.</a>
+    <a href="./004.html">004파일로 이동합니다.</a>
+    <a href="#section1">section1로 이동합니다.</a>
+  </div>
+  <section id="section1">
+    section
+  </section>
+
+</body>
+
+</html> -->

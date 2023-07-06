@@ -1,0 +1,36 @@
+/* 클래스 선택자 */
+.my {
+    color: blueviolet;
+}
+
+/* 형제 인접 선택자 */
+/* .my+p {} */
+
+/* 아이디 선택자 */
+#title {
+    text-decoration: underline;
+}
+
+strong {
+    background-color: yellow;
+}
+
+
+/* 자손 선택자 */
+.sect2 strong {
+    background-color: yellow;
+}
+
+/* 자식 선택자 슈퍼 개발자만 강조하고 싶을 때*/
+/* .sect2 > strong{ 
+    background-color: yellow;
+} */
+
+.sect2>strong {
+    background-color: yellow;
+}
+
+.sect2>* {
+    /*  이렇게 하면 3개 별만 사용하면 4개  */
+    border: 2px solid red;
+}
