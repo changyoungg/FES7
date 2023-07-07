@@ -1,117 +1,44 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전역변수</title>
-    <style>
-        :root{
-            --main-color: royalblue;
-            --pane-padiing: 4px 40px;
-        }
-
-    </style>
-</head>
-<body>
-    
-</body>
-</html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
 <html lang="ko-KR">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>구조적 가상 선택자</title>
+  <title>가상요소</title>
+
   <style>
-    /* ol :first-child {
-      color: red;
+    p::before {
+      content: '7기 여러분 ';
+    }
+
+    p::after {
+      content: '😀';
+    }
+
+    /* 빈 태그에는 before after 사용 불가 앞뒤 구분이 안되서 */
+    /* input::before {
+      content: '7기 여러분 ';
     } */
-
-    li:first-child {
-      color: red;
-    }
-
-    li:nth-child(even) {
-      color: royalblue;
-    }
-
-    /* li:last-child {
-      color: green;
-    } */
-    div :nth-of-type(3) {
-      color: red;
-    }
-
-    div :only-of-type {
-      background-color: skyblue;
-    }
-
-    li {
-      background-color: #eee;
-    }
-
-    li:not(:first-child) {
-      margin-top: 20px;
-    }
-
-    p:not(.t2) {
-      background-color: aqua;
-    }
   </style>
 </head>
 
 <body>
-  <div>
-    <p class="t1">안녕</p>
-    <p class="t1">안녕</p>
-    <p class="t1">안녕</p>
-    <p class="t1">안녕</p>
-    <p class="t2">안녕</p>
-    <p class="t2">안녕</p>
-    <p class="t2">안녕</p>
-    <p class="t2">안녕</p>
-    <p class="t2">안녕</p>
-  </div>
-  <div>
-    <p>안녕하세요</p>
-    <p>안녕하세요</p>
-    <p>안녕하세요</p>
+  <p> <strong>안녕하세요</strong>
+    <strong>안녕하세요</strong><br>
     <strong>안녕하세요</strong>
-    <em>em태그</em>
-    <p>안녕하세요</p>
-    <a href="#">a 태그</a>
-    <a href="#">a 태그</a>
-    <a href="#">a 태그</a>
-  </div>
-  <hr>
-  <ol class="ol-style">
-    <!-- li{리스트}*10 -->
-    <li>리스트
-      <ol>
-        <li>ol li</li>
-        <li>ol li</li>
-      </ol>
-    </li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-    <li>리스트</li>
-  </ol>
+    <strong>안녕하세요</strong>
+    <strong>안녕하세요</strong>
+  </p>
+
+
+  <img src="">
+  <input type="text">
+
 
 
 </body>
 
-</html> -->
+</html>
+
+

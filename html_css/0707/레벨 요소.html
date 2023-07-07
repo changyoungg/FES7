@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록/인라인 요소</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        /* div는 블록 span은 인라인 블록은 전체가 잡히기 때문에 인라인 안에 태그로 중첩 불가능 */
+        div,
+        span{
+            border: 2px solid salmon;
+            padding: 20px;
+            /* 블록만 */
+            width: 200px;
+            height: 50px;
+
+            /* 인라인 요소는 상하 적용 안됨 */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <span>안녕하세요</span>
+    <span>안녕하세요</span>
+    <span>안녕하세요</span>
+
+    <!-- 가능 -->
+    <div>
+        <span>안녕하세요</span>
+        <span>안녕하세요</span>
+        <span>안녕하세요</span>
+    </div>
+
+    <!-- 불가능 -->
+    <span>
+        <div>안녕하세요</div>
+        <div>안녕하세요</div>
+        <div>안녕하세요</div>
+    </span>
+
+    <!-- 인라인 요소 중 a태그만 블록요소 중첩가능 -->
+</body>
+</html>
