@@ -6,25 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박스 꾸미기</title>
     <style>
-        div{
+        .box1 {
             background-color:#343F50;
             width: 200px;
             height: 100px;
+            margin: 20px 20px;
             text-align: center;
-            line-height: 60px;
+            line-height: 50px;
             box-sizing: border-box;
             border: 2px solid #000;
             box-shadow: 2px 2px 0px 0px #4A5568 inset;
         }
-        p{
+
+        .box2 {
+            text-align: center;
+            line-height: 50px;
+            background:linear-gradient(90deg, rgba(133,78,246,1) 0%, rgba(56,107,242,1) 100%);
+            width: 200px;
+            height: 100px;
+            margin: 20px 20px;
+            border-radius: 50px 50px;
+            border: 4px dashed rgb(236, 215, 236);
+            box-sizing: border-box;
+            background-clip: padding-box;
+        }
+
+        .box3 {
+            background-color: white;
+            width: 200px;
+            height: 100px;
+            margin: 20px 20px;
+            text-align: center;
+            line-height: 50px;
+            border: 2px solid rgba(228, 228, 221, 0.815);
+            border-radius: 0 50px 50px 50px;
+            box-shadow: 10px 10px 10px 5px rgb(207, 206, 206);
+        }
+        
+        p {
             font-weight:bold;
-            color: white;
+            color : white;
+            font-size: 20px;
+        }
+
+        .p1 {
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
     <div class="box1">
         <p>Hello ✌</p>
+    </div>
+    <div class="box2">
+        <p>Hello ✌</p>
+    </div>
+    <div class="box3">
+        <p class="p1">Hello ✌</p>
     </div>
 </body>
 </html>
