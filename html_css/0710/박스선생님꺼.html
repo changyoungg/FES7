@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스</title>
+    <style>
+        /* 태그 두개 이용 */
+
+        p {
+            margin: 0;
+        }
+
+        .box1 {
+            background-color: #343f50;
+            color: white;
+            width: 100px;
+            height: 32px;
+            text-align: center;
+            border: 5px solid #000;
+            overflow: hidden;
+        }
+
+        .box1 p {
+            border: 5px solid #4a5568;
+            border-width: 5px 0 0 5px;
+            height: 100%;
+            padding: 2px 0;
+        }
+
+        /* 태그 하나로 */
+        .box2 {
+            background-color: #343f50;
+            color: white;
+            width: 100px;
+            height: 32px;
+            text-align: center;
+            border: 5px solid #000;
+            box-shadow: inset 5px 5px 0 0 #4a5568;
+            box-sizing: border-box;
+        }
+
+        .box3 {
+            background-color: skyblue;
+            color: #000;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px 50px;
+            border: 5px dashed violet;
+            background-clip: padding-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <p>Hello</p>
+    </div>
+    <br>
+
+    <p class="box2">
+        Hello
+    </p>
+    <br>
+    <p class="box3">
+        Hello
+    </p>
+</body>
+
+</html>
