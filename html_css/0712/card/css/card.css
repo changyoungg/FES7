@@ -1,0 +1,27 @@
+div,
+p {
+    margin: 0;
+}
+
+.bg {
+    width: 288;
+    height: 374;
+    background-color: aliceblue;
+}
+
+.profile {
+    display: flex;
+    padding: 16px 16px;
+
+}
+
+.name {
+    padding: 0 16px;
+}
+
+.index {
+    width: 256px;
+    height: 40px;
+    padding: 0 16px;
+    overflow: hidden;
+}
