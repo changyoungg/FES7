@@ -173,7 +173,7 @@ li {
 
 .notice {
     width: 1224px;
-    max-width: 100%;
+    max-width: calc(100% - 50px);
     margin: 0 auto;
 }
 

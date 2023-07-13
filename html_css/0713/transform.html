@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box:nth-child(even) {
+            background-color: seagreen;
+        }
+        .scale {
+            transform-origin: 100px 100px;
+            transition: all 2s;
+        }
+        .scale:hover {
+            /* transform: scale(1.2 , 2); */
+            /* transform: scaleX(1.2) scaleY(2); */
+            /* transform: rotate(1turn); */
+            /* transform: translate(-50px , 50px); */
+            /* transform: skew(30deg, 20deg); */
+            /* 여러개 쓸 경우 뒤에 이어서 붙여써야함 */
+            transform: rotate(1turn) scale(1.2 , 2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box scale">
+        box
+    </div>
+    <div class="box">
+        box
+    </div>
+</body>
+</html>

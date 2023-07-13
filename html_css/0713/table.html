@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table {
+            width: 400px;
+        }
+        caption {
+            caption-side: bottom;
+        }
+
+        .col1 {
+            background-color: gold;
+        }
+
+        .col2 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h2>테이블의 제목</h2> -->
+    <table>
+        <caption>테이블의 제목, 설명</caption>
+        <colgroup>
+            <col>
+            <col span="2" class="col1">
+            <col class="col2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>제목</th>
+                <th>제목</th>
+                <th>제목</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>제목</th>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td>내용</td>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+</body>
+
+</html>
