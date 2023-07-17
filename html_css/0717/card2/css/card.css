@@ -1,0 +1,206 @@
+/* font */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font: inherit;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 실습 */
+.body {
+    font-family: 'Pretendard', sans-serif;
+}
+
+.card {
+    /* width: 288px; */
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 16px 12px;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* 이미지 크기를 맞춰주는 거 안쓰면 짜부된 느낌.. */
+    object-fit: cover;
+}
+
+/* 이름이 길어서 넘칠 때 flex 상태에서 해결법 */
+.c-h-text {
+    overflow: hidden;
+}
+
+.fwb {
+    font-family: 'Pretendard';
+    font-weight: bold;
+    color: #29363d;
+    font-size: 16px;
+}
+
+.fw {
+    font-size: 12px;
+    color: #5a6a72;
+}
+
+/* 말줄임 한줄 */
+.ell1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+/* 말줄임 여러줄 */
+.ell2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: calc(1em * 1.6 * 2);
+}
+
+.thumnail {
+    width: 100%;
+    aspect-ratio: 288/196;
+    object-fit: cover;
+}
+
+.c-content {
+    padding: 10px 16px 24px 16px;
+}
+
+.c-content .ell2 {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.read {
+    font-size: 14px;
+    text-decoration: underline;
+    width: 60px;
+    /* ::after 기준 */
+    position: relative;
+}
+
+.read::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    /* background-color: aqua; */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    /* border: 2px  solid #29363d; */
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #29363d;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* 버튼 */
+.card {
+    position: relative;
+}
+
+.btn-group {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    padding: 0;
+    display: flex;
+    gap: 8px
+}
+
+.btn-group button {
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+.btn-group button img {
+    width: 32px;
+    vertical-align: top;
+}
+
+.card-list {
+    display: grid;
+    gap: 32px 24px;
+    grid-template-columns: repeat(auto-fill, minmax(288px, auto));
+}
+
+.notice {
+    width: 1224px;
+    max-width: calc(100% - 50px);
+    margin: 0 auto;
+}
+
+.notice h2 {
+    font-size: 30px;
+    margin-bottom: 32px;
+}
+
+/* 회전 연습 */
+/* .read::after {
+    content: '';
+    display: block;
+  
+    width: 4px;
+    height: 4px;
+  
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-style: solid;
+    border-color: #29363d;
+    border-width: 2px 2px 0 0;
+  
+    transform: translate(-10px, -50%) rotate(45deg);
+    transition: all 0.3s;
+  }
+  
+  .read:hover::after {
+    border-color: royalblue;
+    transform: translate(0, -50%) rotate(405deg); */

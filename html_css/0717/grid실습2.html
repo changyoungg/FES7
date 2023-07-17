@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 실습</title>
+    <style>
+        /* 5분할 */
+        /* .wrapper{
+            width: 600px;
+            height: 600px;
+            display: grid;
+            grid-template-areas:
+            "blue blue blue yellow yellow"
+            "blue blue blue yellow yellow"
+            "violet violet orange yellow yellow"
+            "red red green green green"
+            "red red green green green"
+            ;
+            padding: 10px;
+            gap: 10px;
+        }
+        .blue{
+            background-color: blue;
+            grid-area: blue;
+        }
+        .yellow{
+            background-color: yellow;
+            grid-area: yellow;
+        }
+        .violet{
+            background-color: violet;
+            grid-area: violet;
+        }
+        .orange{
+            background-color: orange;
+            grid-area: orange;
+        }
+        .red{
+            background-color: red;
+            grid-area: red;
+        }
+        .green{
+            background-color: green;
+            grid-area: green;
+        } */
+
+        /* 3분할 */
+        .wrapper {
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-template-rows: 2fr 1fr 2fr;
+            gap: 10px;
+            grid-template-areas:
+                "blue blue yellow "
+                "violet orange yellow "
+                "red green green"
+            ;
+        }
+
+        .blue {
+            background-color: blue;
+            grid-area: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+            grid-area: yellow;
+        }
+
+        .violet {
+            background-color: violet;
+            grid-area: violet;
+        }
+
+        .orange {
+            background-color: orange;
+            grid-area: orange;
+        }
+
+        .red {
+            background-color: red;
+            grid-area: red;
+        }
+
+        .green {
+            background-color: green;
+            grid-area: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="blue"> </div>
+        <div class="yellow"> </div>
+        <div class="violet"> </div>
+        <div class="orange"> </div>
+        <div class="red"> </div>
+        <div class="green"> </div>
+    </div>
+</body>
+
+</html>

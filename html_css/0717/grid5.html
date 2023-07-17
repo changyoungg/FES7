@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        /* 그리드 속성에서는 position 사용하지 않아도 우선순위 설정 가능 z-index */
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: #eee;
+            display: grid;
+            gap: 10px;
+            grid-template-areas: 
+            "header header header"
+            "section section aside"
+            "footer footer footer"
+            ;
+        }
+
+        header {
+            background-color: skyblue;
+        }
+
+        section {
+            background-color: navy;
+        }
+
+        aside {
+            background-color: lime;
+        }
+
+        footer {
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <section>section</section>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
