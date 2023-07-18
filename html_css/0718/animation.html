@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            animation: change 2s 1s infinite;
+        }
+
+        @keyframes change {
+            0% {
+                scale: 0;
+                background-color: royalblue;
+            }
+
+            20% {
+                scale: 0.2;
+                background-color: blue;
+            }
+
+            100% {
+                scale: 1.2;
+                background-color: seagreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="licat"></div>
+    <div class="box">box</div>
+
+
+</body>
+
+</html>

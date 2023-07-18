@@ -1,0 +1,215 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.bg {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+}
+
+.blitz {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+}
+
+.face {
+    background-color: yellow;
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 3;
+    top: 30%;
+    position: absolute;
+    display: flex;
+}
+
+.face::after {
+    padding-bottom: 100%;
+    content: '';
+    display: block;
+}
+
+.leye {
+    background-color: white;
+    width: 14%;
+    border-radius: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 47%;
+    left: 35%;
+}
+
+.leye::after {
+    padding-bottom: 100%;
+    content: '';
+    display: block;
+}
+
+.reye {
+    background-color: white;
+    width: 10%;
+    border-radius: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    right: 35%;
+}
+
+.reye::after {
+    padding-bottom: 100%;
+    content: '';
+    display: block;
+}
+
+.wrap1 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    animation: moving 2s ease;
+}
+
+.wrap1 *{
+    animation: moving2 2s ease;
+}
+.wrap2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bodyy {
+    background-color: yellow;
+    width: 70%;
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 30% 30% 50% 50%;
+    z-index: 2;
+    bottom: 70%;
+    position: absolute;
+}
+
+.bodyy2 {
+    background-color: yellowgreen;
+    width: 70%;
+    height: 50%;
+    border: 2px solid black;
+    border-radius: 30% 30% 50% 50%;
+    position: absolute;
+    top: -10%;
+    z-index: 1;
+}
+
+.hand {
+    background-color: yellow;
+    width: 50%;
+    height: 80%;
+    border: 1px solid black;
+    border-radius: 50% 50% 30% 30%;
+    rotate: -15deg;
+    z-index: 5;
+    position: absolute;
+    bottom: 180%;
+    right: 10%;
+
+    animation: punch 2.5s 2 ease-in;
+    animation-delay: 2s;
+}
+
+.finger {
+    background-color: yellow;
+    width: 30%;
+    height: 80%;
+    border: 1px solid black;
+    z-index: 6;
+    position: absolute;
+    left: 4%;
+}
+
+.finger2 {
+    background-color: yellow;
+    width: 30%;
+    height: 80%;
+    border: 1px solid black;
+    z-index: 6;
+    position: absolute;
+    left: 35%;
+}
+
+.finger3 {
+    background-color: yellow;
+    width: 30%;
+    height: 80%;
+    border: 1px solid black;
+    z-index: 6;
+    position: absolute;
+    left: 66%;
+}
+
+/* @keyframes moving {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+} */
+/* @keyframes moving {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+} */
+
+/* @keyframes moving2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg) translateX(-10px);
+    }
+
+    100% {
+        transform: rotate(30deg) translateX(-10px) translateY(-10px);
+    }
+} */
+
+@keyframes punch {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(50%) translateY(50%) rotate(-160deg);
+        width: 500%;
+        height: 500%;
+    }
+}
