@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, skyblue, rgb(228, 153, 228));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap {
+    /* border: 2px dashed red; */
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+
+    /* 기준 */
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform: perspective(200px) scale(0.5);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    color: #fff;
+
+    position: absolute;
+
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: rgba(46, 139, 87, 0.8);
+}
+.back {
+    background-color: rgba(255, 166, 87, 0.8);
+
+    transform: rotateY(180deg) rotateX(0deg);
+}
+
+/* hover */
+.wrap:hover .card {
+    transform: rotateY(180deg);
+    transform: perspective(200px) scale(1.2) rotateX(360deg) rotateY(540deg);
+}

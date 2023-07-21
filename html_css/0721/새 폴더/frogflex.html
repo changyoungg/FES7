@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        body {
+            background-color: brown;
+        }
+
+        .playground {
+            border: 10px solid maroon;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 20px;
+            background-color: skyblue;
+
+            display: flex;
+        }
+
+        .frog {
+            background-color: mediumaquamarine;
+            color: lime;
+            font-size: 40px;
+            margin: 10px;
+            border: 6px solid green;
+            border-radius: 10px;
+            flex-basis: 200px;
+            flex-shrink: 1;
+            /* flex-grow: 1; */
+        }
+
+        .frog.covid {
+            background-color: orangered;
+            margin-left: auto;
+        }
+
+        .frog.sun {
+            flex-shrink: 0;
+        }
+
+        .frog.cry {
+            flex-shrink: 200;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="playground">
+        <div class="frog cry">Frog</div>
+        <div class="frog">Frog</div>
+        <div class="frog">Frog</div>
+        <div class="frog">Frog</div>
+        <div class="frog sun">Frog</div>
+    </div>
+</body>
+
+</html>

@@ -12,9 +12,12 @@ body {
     margin: 0;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     margin: 0;
     padding: 0;
+    font: inherit;
 }
 
 img {
@@ -31,7 +34,37 @@ button {
     font: inherit;
 }
 
+button {
+    border: 0;
+    background: none;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+ol,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 /* CSS 적용 --------------------------------------------------------------------*/
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
 
 body {
     font-family: 'Pretendard' sans-serif;
@@ -61,6 +94,38 @@ body {
     width: 156px;
 }
 
+/* index.html */
+.header .login-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header .login-text p::after {
+    content: "|";
+    color: #d8ddde;
+    margin-left: 24px;
+
+}
+
+.header .login-text p strong {
+    font-family: "Pretendard";
+    font-weight: 700;
+    box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.8);
+}
+
+@media (max-width: 600px) {
+    .header .login-text p {
+        position: absolute;
+        top: 140px;
+        right: 0;
+    }
+}
+
+.header .login-text p::after {
+    display: none;
+}
+
 /* footer */
 .footer {
     text-align: center;
@@ -69,6 +134,17 @@ body {
 }
 
 /* 버튼 */
+[class^="btn"] {
+    display: inline-flex;
+    height: 40px;
+    padding: 0 20px 0 52px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 10px 50%;
+    align-items: center;
+}
+
 .btn-join {
     display: inline-flex;
     height: 40px;
@@ -79,6 +155,18 @@ body {
     background-size: 32px;
     background-position: 10px 50%;
     align-items: center;
+}
+
+.btn-login {
+    background-image: url(../img/icon-login.svg);
+}
+
+.btn-join {
+    background-image: url(../img/icon-join.svg);
+}
+
+.btn-logout {
+    background-image: url(../img/icon-logout.svg);
 }
 
 /* 로그인 */
@@ -132,7 +220,7 @@ body {
 }
 
 /* 로그인 form */
-.form {
+.login .form {
     width: 392px;
     margin: 40px auto 50px;
 }
@@ -164,4 +252,17 @@ body {
     background-color: #29363d;
     color: #f4f5f5;
     border-radius: 4px;
+}
+
+.form textarea {
+    display: block;
+    width: 100%;
+    /* height: 360px; */
+    aspect-ratio: 1/1;
+    border: 1px solid #677880;
+    border-radius: 4px;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
 }
