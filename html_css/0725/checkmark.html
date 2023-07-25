@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      .txt-hide {
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        clip-path: inset(50%);
+      }
+      .labl-hold {
+        position: relative;
+      }
+      .labl-hold::before {
+        display: inline-block;
+        content: "";
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        border: 1px solid black;
+        vertical-align: -5px;
+      }
+
+      .inpholdLfocus-visible + .labl-hold::before {
+        outline: 2px solid teal;
+        outline-offset: 3px;
+      }
+      .labl-hold::after {
+        content: "";
+        /* 포지션속성은 블록속성으로 바꿔준다 */
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        width: 22px;
+        height: 22px;
+
+        /* background-image: url(./img/checkmark.png);
+        background-size: 22px;
+        background-repeat: no-repeat; */
+        background: url(./img/checkmark.png) 0 0 / 22px no-repeat;
+
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      .inphold:checked + .labl-hold::after {
+        left: 0;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 라벨은 이름을 만들어준다 -->
+    <input class="inphold txt-hide" type="checkbox" id="inpHold" />
+    <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+  </body>
+</html>

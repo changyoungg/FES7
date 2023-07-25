@@ -1,0 +1,20 @@
+		/* flex-basis을 200px으로 해도 내부 컨텐츠 너비에 따라 넘을 수 있다 (인지) */
+        /* 항상 유효한 너비가 아니다(flex-basis) -> 이유(초기값 : flex-shrink : 1)*/
+
+        /* width를 적용하면 width값에 맞춰진다 */
+        /* flex-basis가 width 값을 가져온다 */
+        /* min-width도 width 값을 가져온다  */
+
+        /* min-width 는 자식 컨텐츠의 너비만큼이다(초기값 auto)  */
+        /* 내부 컨텐츠가 늘어가면 min-width 값도 늘어난다 (auto)  */
+
+        /* flex-grow -> 가변적인 값을 사용하면 컨텐츠가 늘어나면 계속 늘어난다. */
+        /* layout을 잡는다 = 안정성있게 고정이 되어야한다 */
+        /* flex-basis: auto 인 상황이면 문제가 발생 할 수 있다 */
+        /* 그래서 ->  */
+
+        /* flex-grow가 1인 main의 컨텐츠가 많아진 상황에서  */
+        /* 사이드바의 flex-shrink가 없다면 사이드가 줄어든다 (flex-shrink:0으로 고정) */
+        /* 늘어나는건 못막는다 줄어드는 것만 막는다 */
+        /* 또한 main이 길어진다 그러나 min-width를 주면 내용물만 넘친다  */
+        /* min-width: 0으로 main이 길어지는 것을 해결  */

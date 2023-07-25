@@ -1,0 +1,60 @@
+a {
+  text-decoration: none;
+}
+
+
+.wrapper {
+    width: 520px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+}
+
+header img {
+    display: block;
+}
+
+h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.content2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.log {
+  width: 472px;
+  height: 50px;
+  border: 1px solid #767676;
+  border-radius: 5px;
+  color: #767676;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+}
+
+.face {
+    border: 1px solid #2D9CDB;
+    
+}
+
+.naver {
+    border: 1px solid #00BF18;
+}
+
+.kakao {
+    border: 1px solid #F2C94C;
+}
+
+.log img {
+    padding-left: 15px;
+}
+
+p {
+    margin: auto;
+}

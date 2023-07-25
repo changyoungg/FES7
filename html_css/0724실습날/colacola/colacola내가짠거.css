@@ -1,0 +1,77 @@
+/* reset */
+body,
+h1,
+h2,
+p,
+ul,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input {
+    font: inherit;
+}
+
+button:enabled {
+    cursor: pointer;
+    font: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* CSS 적용 */
+body {
+    background-color: #EAE8FE;
+}
+
+/* 큰 틀 */
+header {
+    margin: auto;
+}
+
+h1 {
+    width: 436px;
+    margin: auto;
+}
+
+h1 img {
+    max-width: 50%;
+}
+
+main {
+    width: 748px;
+    display: flex;
+    gap: 28px;
+    margin: auto;
+}
+
+main section {
+    width: 360px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 43px;
+}
+
+.machine-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* machine 세부 */
+.drink .kinddrink {
+    width: 94px;
+    border-radius: 10px;
+}
+
+/* machine 세부2 */
+

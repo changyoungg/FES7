@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #d9d9d9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.wrapper {
+  width: 448px;
+  margin: auto;
+  font-family: "Arial";
+  display: flex;
+  flex-direction: column;
+  /* position: absolute;
+  margin: 50%;
+  transform: translateY(-50%); */
+}
+
+.header {
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 46px 0 46px 0px;
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: 4px solid #dddddd;
+  color: #ff007a;
+  display: flex;
+  gap: 32px;
+}
+
+.box {
+  width: 8px;
+  height: 32px;
+  background-color: #ff007a;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.contents {
+  background-color: #eeeeee;
+  padding: 38px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 4px 4px 0px #0000001a;
+}
+
+.text {
+  background-color: #ffffff;
+  width: 372px;
+  border: 4px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #888888;
+}
+
+.text.check {
+  color: #759cff;
+  border-color: #759cff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-container {
+  width: 372px;
+  border: 4px solid #797676;
+  border-radius: 10px;
+  padding: 15px;
+}
