@@ -11,17 +11,75 @@
     <div class="wrapper">
       <header>
         <h2>로그인 또는 회원가입</h2>
-        <img src="./img/close.png" alt="">
+        <!-- <img src="./img/close.png" alt=""> -->
       </header>
       <div class="main">
-        <div class="content"></div>
+        <div class="content">
+          <h2>위니브에서 여러분의 궁금증을 해결하세요 !:)</h2>
+
+          <form class="admin-input">
+            <label for="id" class="a11y-hidden">아이디</label>
+            <input class="admin id" type="text" id="id" placeholder="아이디" />
+
+            <label for="pw" class="a11y-hidden">아이디</label>
+            <input
+              class="admin pw"
+              type="password"
+              id="pw"
+              placeholder="비밀번호"
+            />
+          </form>
+
+            <input type="checkbox" id="loging" class="txt-hide" /><label
+              for="loging"
+              class="loging"
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="check-box">
+                  <circle
+                    id="Ellipse 1"
+                    cx="11"
+                    cy="11"
+                    r="10.5"
+                    stroke="#767676"
+                  />
+                  <path
+                    id="Vector"
+                    d="M15.5 8.5L10.5 14L7 10.5"
+                    stroke="#767676"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              로그인 상태 유지</label
+            >
+
+          <a href="#">로그인</a>
+          <div class="find">
+            <p class="reg">회원가입</p>
+            <p>|</p>
+            <p class="idpw">아이디/비밀번호 찾기</p>
+          </div>
+          <div class="or-wrap">
+            <div class="bar"></div>
+            <p class="or">또는</p>
+            <div class="bar"></div>
+          </div>
+        </div>
+
         <div class="content2">
           <a class="log google" href="#"
             ><img src="./img/Google__G__Logo 1.png" alt="" />
             <p>구글 계정으로 로그인</p></a
           >
           <a class="log face" href="#"
-            ><img src="./img/facebook.png" alt="" />
+            ><img src="./img/icon_fb.png" alt="" />
             <p>페이스북 계정으로 로그인</p></a
           >
           <a class="log naver" href="#"

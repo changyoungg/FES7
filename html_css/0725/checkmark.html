@@ -4,58 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>document</title>
+    <title>23.css 실무 테크닉</title>
     <style>
       .txt-hide {
         overflow: hidden;
+        /* 안보이게 숨김 (내용이 커지거나 많아져도 숨겨짐) */
         width: 1px;
         height: 1px;
+        /* 아예 0으로 하지 않는 이유는 ? : 스크린 리더가 아예 못읽을 수도 있음 ((존재한다는 것은 명시해야함)) */
         clip-path: inset(50%);
+        /* 경로에 따라서 html요소를 잘라내는 속성 */
+        /* inset: 네모 모양으로 요소를 잘라줌 */
       }
+
       .labl-hold {
         position: relative;
       }
+
+      /* after가상요소의 기준점이 되게 하기 위해 relative 적용 */
+
+      /* 접근성 측면에서 체크박스 안의 이미지는 상관이 없다.==>가상요소 사용 가능 */
       .labl-hold::before {
         display: inline-block;
         content: "";
         width: 22px;
         height: 22px;
+        /* 가상 요소는 기본적으로 인라인 요소를 갖고 있음 ///inline-block으로 지정해줘야 넓이높이를 적용할 수 있음 */
         margin-right: 10px;
         border: 1px solid black;
         vertical-align: -5px;
+        /* 초기값:baseline// 5px 내려서 라인을 맞춰줌 */
       }
 
-      .inpholdLfocus-visible + .labl-hold::before {
+      .inphold:focus-visible + .labl-hold::before {
+        /* inp-hold를 포커스 했을 때 이것의 인접형제 before 가상요소에 일어나는 변화 */
+        /* focus만 쓰면 선택했을 때의 모든 상황 */
+        /* focus-visible: 키보드를 사용해서(tab) 선택하는 상황에만 나타나도록 하는  */
         outline: 2px solid teal;
         outline-offset: 3px;
+        /* 아웃라인의 범위를 확장 (떨어뜨릴 수 있음) */
       }
+
       .labl-hold::after {
         content: "";
-        /* 포지션속성은 블록속성으로 바꿔준다 */
         position: absolute;
-        top: 0px;
+        /* display 속성을 주지 않았는데 position만으로도 이미지가 나타남(widhtheight값이 적용됨) */
+        /* ==> 왜?: position 속성을 적용하면 자동으로 display:block이 적용된다! 따라서 position을 쓸거면 display:block을 따로 안줘도 된다.*/
+        /* absolute는 반드시 기준값 필요 ==> .labl-hold에 relative 적용 */
+        top: -1px;
         left: 20px;
+        /* 박스 오른쪽에서 박스 안으로 샥~들어가는 효과를 주기 위해 오른쪽에 위치시킴 */
+
         width: 22px;
         height: 22px;
-
-        /* background-image: url(./img/checkmark.png);
-        background-size: 22px;
-        background-repeat: no-repeat; */
-        background: url(./img/checkmark.png) 0 0 / 22px no-repeat;
-
+        background: url(./images/checkmark.png) 0 0/22px no-repeat;
+        /* 경로 포지션/사이즈 ↓와 동일 */
+        /* background-image: url(./images/checkmark.png);
+            background-size: 22px;
+            background-repeat: no-repeat; */
         opacity: 0;
+        /* 나타나지 않았다가 클릭 시 나타나게끔 */
         transition: all 0.3s;
+        /* 이 요소에서 일어나는 변화가 0.3초동안 일어나게 함 */
       }
 
+      /* inphold가 체크됐을 시 설정 */
       .inphold:checked + .labl-hold::after {
+        /* inphold의 인접형제 label-hold의 가상요소 생성 */
+        /* checked라는 요소는 아래에 없기 때문에 없지만 있는 것처럼 사용하기 위해서 가상 클래스 선택자 사용(:) */
+        /* 가상요소 선택자(::) */
         left: 0;
         opacity: 1;
+        /* 클릭 시 나타나게끔 */
       }
     </style>
   </head>
+
   <body>
-    <!-- 라벨은 이름을 만들어준다 -->
-    <input class="inphold txt-hide" type="checkbox" id="inpHold" />
+    <input type="checkbox" id="inpHold" class="inphold txt-hide" />
     <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+
+    <!-- 접근성 측면에서 체크박스 안의 이미지는 상관이 없다.  ==> 가상요소 사용 가능-->
   </body>
 </html>

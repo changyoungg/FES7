@@ -1,27 +1,208 @@
+/* 폰트 */
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* a11y */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.txt-hide {
+  overflow: hidden;
+  /* 안보이게 숨김 (내용이 커지거나 많아져도 숨겨짐) */
+  width: 1px;
+  height: 1px;
+  /* 아예 0으로 하지 않는 이유는 ? : 스크린 리더가 아예 못읽을 수도 있음 ((존재한다는 것은 명시해야함)) */
+  clip-path: inset(50%);
+  /* 경로에 따라서 html요소를 잘라내는 속성 */
+  /* inset: 네모 모양으로 요소를 잘라줌 */
+  display: none;
+}
+
+/* 초기화 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
 a {
   text-decoration: none;
 }
 
+h1,
+h2,
+p {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* 적용 */
+body {
+  height: 100vh;
+  display: flex;
+}
 
 .wrapper {
-    width: 520px;
-    border: 1px solid #C4C4C4;
-    border-radius: 10px;
+  width: 520px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-header img {
-    display: block;
+header {
+  width: 520px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #c4c4c4;
+  background-image: url(./img/close.png);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 480px 23px;
+  
 }
 
-h2 {
-    font-size: 16px;
-    text-align: center;
+/* 헤더 */
+.wrapper h2 {
+  font-size: 16px;
+  margin: auto;
 }
 
-.content2 {
+/* 로그인 콘텐츠 */
+.content {
+  width: 520px;
+}
+
+.content h2 {
+  font-size: 20px;
+  padding-left: 24px;
+  padding-top: 26px;
+}
+
+.admin-input {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 24px 24px 17px 24px;
+  
+}
+
+.content .admin {
+  width: 472px;
+  height: 50px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #C4C4C4;
+}
+
+ .id:focus {
+  outline: none;
+  border: 2px solid #F4492E;
+}
+
+#loging {
+  margin-left: 28px;
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+
+.loging {
+  font-size: 16px;
+  height: 22px;
+  color: #767676;
+  margin-left: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked + label circle {
+  fill: #2f80ed;
+  stroke: #2f80ed;
+}
+
+input[type="checkbox"]:checked + label path {
+  stroke: white;
+}
+
+.content a {
+  display: inline-block;
+  width: 472px;
+  margin: 20px 24px;
+  padding: 14px 0;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #2f80ed;
+  color: white;
+}
+
+.find {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: #767676;
+}
+
+.reg {
+  padding-right: 12px;
+}
+
+.idpw {
+  padding-left: 12px;
+}
+
+.or-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 29px;
+}
+
+.or-wrap .or {
+  padding: 0 13px;
+  color: #767676;
+}
+
+.or-wrap .bar {
+  background: #c4c4c4;
+  width: 210px;
+  height: 1px;
+}
+
+/* 소셜 로그인 콘텐츠 */
+.content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .log {
@@ -35,26 +216,24 @@ h2 {
   display: flex;
   align-items: center;
   /* justify-content: center; */
-
 }
 
 .face {
-    border: 1px solid #2D9CDB;
-    
+  border: 1px solid #2d9cdb;
 }
 
 .naver {
-    border: 1px solid #00BF18;
+  border: 1px solid #00bf18;
 }
 
 .kakao {
-    border: 1px solid #F2C94C;
+  border: 1px solid #f2c94c;
 }
 
 .log img {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
-p {
-    margin: auto;
+.content2 p {
+  margin: auto;
 }
