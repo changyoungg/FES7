@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //9.4 자바스크립트 scope
+        const func1 = function () {
+            var a = 1;
+            var b = 2;
+
+            console.log(a + b); //일단 함수 내부에서 정의된 변수를 '먼저' 찾는다
+            //없으면 바깥에서 가지고 옴 (전역)
+            //내부에서부터 외부까지 대응되는 프로퍼티를 찾아내는 과정: 스코프 체이닝
+        };
+
+        var a = 20;
+
+        func1();
+
+
+        //scope의 종류//
+        //1. 전역 스코프 : 스코프의 어디서든 접근이 가능한 공간 
+        //(충돌 발생을 막기 위해 되도록이면 사용하지 않는 것을 권장)
+
+        //2. 함수 스코프 : 함수 내부의 공간 => 외부 또는 다른 함수에서 접근 불가능
+        //**내부에서 외부로의 접근은 가능
+        function hello(a) {
+            return a + "hello"
+        }
+
+        hello('jaehyun')
+        //여기서 사용한 매개변수 a는 외부, 또는 다른 함수에서 사용이 가능한가? => 불가능 
+        //==> hello 함수 스코프 안에 존재하기 때문
+        //함수 내부에서는 어디서든 접근 가능 
+
+        //3. 블록 스코프 : 중괄호 안에서의 공간 => 블록 내부에 정의된 변수는 블록의 실행이 끝나면 해제됨
+        if (true) {
+            let x = 10;
+            const y = 10;
+        }
+        console.log(x, y)
+        //블록스코프가 형성되었기 때문에 외부에서는 접근 불가능
+        //결과: error => x,y라는 값을 찾을 수 없음 
+        //let, const는 블록스코프 안에서만 생존 가능 
+        //*블록스코프 내에서 var로 변수를 선언하면 외부에서도 접근 가능하다
+
+
+        let a = 10;
+
+        function outer() {
+            let b = 20;
+
+            function inner() {
+                let c = 30;
+                console.log(a, b, c); //outer함수를 실행했을 때 첫번째 출력
+            }
+
+            inner();
+            console.log(a, b); //두번째 출력
+        }
+
+        outer(); //출력: 10, 20, 30 / 10, 20
+        console.log(a);
+
+
+
+        let z = 100;
+        function sum(x) { // x는 매개변수(parameter)이면서 지역변수(local val)
+            let y = 50; // y는 지역변수
+            z = z + y;
+            return x + y;
+        }
+        console.log(sum(10)); // 10은 전달인자(argument)
+        //출력: 60
+        console.log(x);
+        //출력: error => x라는 값을 찾을 수 없음
+        console.log(y);
+        //출력: error => y라는 값을 찾을 수 없음
+        console.log(z);
+        //출력: 150 //외부에서 선언된 100 + sum함수가 실행됨으로써 z+y가 적용됨
+        /// ????????????????????????? 여기서는 왜 sum함수가 자동으로 실행되는 것임? //No!!!!
+        //===> 앞에서 console.log(sum(10))을 실행해서 z값이 이미 150으로 변경되었기 때문에 z의 값은 150!
+        //sum함수가 실행된 것이 아니라, 위에서 실행되었던 sum함수가 z값을 변경해놓은 것이다
+        //console.log(sum(10))을 실행하지 않았다면 console.log(z)의 값은 100
+    </script>
+</body>
+
+</html>

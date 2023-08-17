@@ -15,3 +15,20 @@ function plusOne(number) {
     answer = 0;
     Array(100).fill(100).map((_, i) => i+1).filter(v => v.toString().includes(1)).reduce((a, c) => a + c, 0)
 }
+
+
+function solution(s) {
+    var answer = []; banana
+    let n_s = ''
+    for (let i = 0; i < s.length; i++){
+        n_s = s.substring(0,i)
+
+        if (n_s.lastIndexOf(s[i]) == -1){
+            answer.push(-1)
+        } 
+        else{
+            answer.push(n_s.length - n_s.lastIndexOf(s[i]))
+        }
+    }
+    return answer
+}

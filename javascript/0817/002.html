@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //콜백함수 : 함수에 매개변수로 전달되어 실행되는 함수 
+        function sum(x, y, 콜백함수) {
+            콜백함수(x + y);
+            return x + y;
+        }
+
+        function documentWriter(s) { //s에 30이 들어감
+            document.write('콜백함수', s);  //출력: 콜백함수, 30
+        }
+
+        sum(10, 20, documentWriter); //콜백함수에 documentWriter함수를 넣어줌
+
+
+
+        // map 의 사용을 통한 콜백함수
+        let arr = [1, 2, 3, 4, 5];
+        arr.map(제곱)
+
+        function 제곱(x) {
+            return x ** 2
+        }
+
+        arr.map(x => x ** 2)
+
+
+        //  forEach의 사용을 통한 콜백함수
+        let arr = [1, 2, 3, 4, 5];
+        arr.forEach(e => console.log(e ** 2));
+
+        function 제곱(x) {
+            console.log(x ** 2)
+        }
+
+    </script>
+</body>
+
+</html>

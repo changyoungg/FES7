@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //클로저: 폐쇄된 공간 안의 데이터에 접근하기 위한 테크닉 
+        const outer = function () {
+            let a = 1;
+            const inner = function () {
+                let b = 5;
+                let c = 6;
+                a = a + b + c;
+
+                console.log(a);
+            }
+
+            inner(); //==> return inner;
+        }
+
+        outer();
+        //만약 outer 함수는 죽고 inner함수만 살아있다면 위 코드는 정상 동작할까?
+
+        const outer = function () {
+            let a = 1; //접근할 수 없이 완전히 폐쇄된 공간: 클로저
+            const inner = function () {
+                let b = 5;
+                let c = 6;
+                a = a + b + c;
+
+                console.log(a);
+            }
+
+            return inner;
+        }
+
+        const newInner = outer();
+
+        newInner();
+        //outer함수가 모두 return되어 사라져도 inner함수는 제대로 작동할 수 있는가? 
+        //inner함수는 outer에 있는 값을 사용하고 있다(참조)
+        //==> outer함수는 사라져도 a라는 값 자체는 남아있으므로 inner함수가 실행될 수 있다
+
+
+        const person = function () {
+            let age = 15;  //age라는 변수는 객체를 리턴하면서 사라지는데, 메모리 값은 남아있음
+
+            return {
+                name: 'jaehyun',
+
+                getAge: function () {
+                    return age;
+                }, //15를 return 하는 getAge함수
+
+                setAge: function (val) {
+                    age = val
+                }
+            } //객체를 리턴하는 person 함수
+        }
+        //return 키워드를 만나면서 person function은 사라지지만, return에서 참조되는 age값은 남아있다 ==> 함수가 사라져도 참조는 남아있다!
+        // => age에 대한 접근 권한은 return에게만 있다
+        // ==> getAge를 통해서 접근, setAge를 통해서 수정 가능
+    </script>
+</body>
+
+</html>
