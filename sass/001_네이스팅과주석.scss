@@ -1,0 +1,11 @@
+// .one > .two > .three - 이건 안보임
+/* .one > .two > .three - 이건 보임 */
+.one {
+    color : red;
+    .two {
+        color: green;
+        .three {
+            color: blue;
+        }
+    }
+}

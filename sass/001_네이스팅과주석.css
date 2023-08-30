@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* .one > .two > .three - 이건 보임 */
+.one {
+  color: red;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: blue;
+}/*# sourceMappingURL=001_네이스팅과주석.css.map */

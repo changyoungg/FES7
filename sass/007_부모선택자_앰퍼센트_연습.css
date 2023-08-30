@@ -1,0 +1,13 @@
+.box-1 {
+  background-color: red;
+}
+.box-2 {
+  background-color: green;
+}
+.box-3 {
+  background-color: blue;
+}
+
+div:hover {
+  background-color: red;
+}/*# sourceMappingURL=007_부모선택자_앰퍼센트_연습.css.map */

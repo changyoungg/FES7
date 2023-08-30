@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!-- 배운 문법을 바탕으로 HTML 요소들 중 첫번째 item-second 와 첫번째 li 를 콘솔로 출력해보세요 🙂 (querySelector 사용 X) -->
+
+    점심 식단
+    <article id="container">
+      <ul>
+        <li>탕수육</li>
+        <li class="item-second">유산슬</li>
+        <li>짜장면</li>
+      </ul>
+    </article>
+    저녁 식단
+    <article>
+      <ul>
+        <li>된장국</li>
+        <li class="item-second">김치찌게</li>
+        <li>해장국</li>
+      </ul>
+    </article>
+    <script>
+      const lis = document.getElementsByTagName("li");
+      const lis2 = document.getElementsByClassName("item-second");
+
+      const container = document.getElementById("container");
+      const innerLis = container.getElementsByTagName('li');
+    </script>
+  </body>
+</html>

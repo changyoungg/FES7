@@ -32,3 +32,56 @@ function solution(s) {
     }
     return answer
 }
+
+function solution(array, n) {
+    var answer = 0;
+    let num = 100;
+    let arrSort = array.sort((a,b) => a-b); //오름차순
+        
+    for(i=0; i<arrSort.length; i++){
+        let num2 = arrSort[i] - n >= 0 ? arrSort[i]-n : n-arrSort[i]
+        if(num>num2){
+            num = num2;
+            answer = arrSort[i];
+        }  
+    }        
+    return answer;
+}
+
+function solution(array, n) {
+    var answer = 0;
+    let a = []; 
+    let arrSort = array.sort((a, b) => (a-b));
+    if (array.length == 1) {
+        return array[0]
+    }
+    for (let i=0; i<array.length; i++) {
+        a.push(arrSort[i] - n >= 0 ? arrSort[i]-n : n-arrSort[i]);
+    }
+    console.log(a)
+    for (let j=0; j<a.length-1; j++) {
+        if (a[j] == 0 ) {
+            answer = n;
+            console.log("1",n,a[j])
+            break;
+        }
+        else if (a[a.length-1] == 0 && j == a.length-1){
+            answer = n;
+            console.log("2",n,a[j])
+            break;
+        
+        } else if (arrSort[j] <= n && a[j] <= a[j+1] ) {
+            answer = -a[j] + n;
+            console.log("3",n,a[j])
+            break;
+        } else if (arrSort[j] > n && a[j] <a[j+1]) {
+            answer = a[j] + n;
+            console.log("4",n,a[j])
+            break;
+        } else {
+            answer = arrSort[arrSort.length-1];
+            console.log("5",n,a[j])
+        }
+     } 
+     return answer;
+}
