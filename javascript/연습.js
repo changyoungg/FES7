@@ -85,3 +85,15 @@ function solution(array, n) {
      } 
      return answer;
 }
+
+function solution(data){
+    let sum = 0
+    for (let i = 0; i<data.length-1;i++){
+        if (isNaN(data[i+1]) == false&&(data[i] == "r" || data[i] == "e" || data[i] == "v")){
+            if (i+1 == data.length) sum += parseInt(data[i+1])
+            else if ( data[i+1] == "1" && data[i+2] == '0') sum += 10
+            else sum += parseInt(data[i+1])
+        } 
+    }
+    return parseInt(sum/10) + "월 " + sum%10+ "일"
+}
