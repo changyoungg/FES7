@@ -1,0 +1,34 @@
+#modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#modal .modal-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 76px 126px 68px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #5B2386;
+}
+#modal h2 {
+    font-size: 66px;
+}
+#modal h3 {
+    font-size: 30px;
+}
+#modal img {
+    max-width: 344px;
+}
+#modal .btn-close {
+    margin-top: 74px;
+}
